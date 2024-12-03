@@ -1,0 +1,41 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class Cat {
+private:
+	string name;
+	double weight;
+public:
+	Cat(const string&n="unknown",double w=0.0):name(n),weight(w){}
+	void setName(const string& n) {
+		name = n;
+	}
+	void setWegith(double w) {
+		weight = w;
+	}
+	string getName() {
+		return name;
+	}
+	double getWeight() {
+		return weight;
+	}
+	void display() {
+		cout << "Name:" << name << endl;
+		cout << "Weight:" << weight << endl;
+	}
+};
+int main() {
+	Cat cat1("Kitty", 4.7);
+	Cat cat2;
+	Cat cat3("Tom", 2.9);
+	cout << "Displaying Cat Objects:" << endl;
+	cat1.display();
+	cat2.display();
+	cat3.display();
+
+	cat2.setName("Thoms");
+	cat2.setWegith(4.5);
+	cout << "After Updating Cat 2:" << endl;
+	cat2.display();
+	return 0;
+}
