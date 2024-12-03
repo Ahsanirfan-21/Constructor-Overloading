@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+class Myclass {
+private:
+	int num;
+	char ch;
+public:
+	Myclass():num(0),ch('x') {}
+	Myclass(int n,int c):num(n),ch(c){}
+	void show()const {
+		cout << "Number:" << num << "Character: " << ch << endl;
+	}
+};
+int main() {
+	Myclass obj1;
+	Myclass obj2(20, 'G');
+	obj1.show();
+	obj2.show();
+	return 0;
+}
